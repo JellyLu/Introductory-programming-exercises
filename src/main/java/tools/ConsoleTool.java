@@ -24,4 +24,8 @@ public class ConsoleTool {
     public static void printInputInvalidError() {
         System.out.println("Input invalid!");
     }
+
+    public static void logBlank() {
+        System.out.print(" ");
+    }
 }

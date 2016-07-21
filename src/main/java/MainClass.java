@@ -16,6 +16,8 @@ public class MainClass {
         MainClass.drawAVerticalLine();
 
         MainClass.drawARightTriangle();
+
+        MainClass.drawIsoscelesTriangle();
     }
 
     public static void printOneAsterisk() {
@@ -38,6 +40,12 @@ public class MainClass {
         ConsoleTool.log("please input number: ");
         int n = Integer.parseInt(ConsoleTool.inputFromConsole());
         Draw.drawARightTriangle(n);
+    }
+
+    public static void drawIsoscelesTriangle() {
+        ConsoleTool.log("please input number: ");
+        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
+        Draw.drawIsoscelesTriangle(n);
     }
 }
 
