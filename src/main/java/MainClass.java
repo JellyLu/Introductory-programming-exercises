@@ -6,7 +6,11 @@ import tools.Draw;
  */
 
 public class MainClass {
-    public static void main(String args[]) {
+    public static void printOneAsterisk() {
         Draw.printOneAsterisk();
+    }
+
+    public static void main(String args[]) {
+        MainClass.printOneAsterisk();
     }
 }
