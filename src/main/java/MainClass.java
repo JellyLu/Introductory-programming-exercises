@@ -1,3 +1,4 @@
+import sun.applet.Main;
 import tools.ConsoleTool;
 import tools.Draw;
 
@@ -10,7 +11,17 @@ public class MainClass {
         Draw.printOneAsterisk();
     }
 
+    public static void drawAHorizontialLine() {
+        ConsoleTool.log("please input a number: ");
+        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
+        Draw.drawAHorizontialLine(n);
+    }
+
     public static void main(String args[]) {
         MainClass.printOneAsterisk();
+
+        MainClass.drawAHorizontialLine();
+
     }
 }
+
