@@ -14,7 +14,7 @@ public class Draw {
             return;
         }
         for (int i = 0; i < n; i++) {
-            ConsoleTool.log("*");
+            Draw.printOneAsterisk();
             if (i == n - 1 ) {
                 ConsoleTool.log("\n");
             }
