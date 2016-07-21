@@ -7,6 +7,15 @@ import tools.Draw;
  */
 
 public class MainClass {
+
+    public static void main(String args[]) {
+        MainClass.printOneAsterisk();
+
+        MainClass.drawAHorizontialLine();
+
+        MainClass.drawAVerticalLine();
+    }
+
     public static void printOneAsterisk() {
         Draw.printOneAsterisk();
     }
@@ -21,14 +30,6 @@ public class MainClass {
         ConsoleTool.log("please input number: ");
         int n = Integer.parseInt(ConsoleTool.inputFromConsole());
         Draw.drawAVerticalLine(n);
-    }
-
-    public static void main(String args[]) {
-        MainClass.printOneAsterisk();
-
-        MainClass.drawAHorizontialLine();
-
-       MainClass.drawAVerticalLine();
     }
 }
 
