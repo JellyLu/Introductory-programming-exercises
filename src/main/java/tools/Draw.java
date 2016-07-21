@@ -62,5 +62,16 @@ public class Draw {
             Draw.drawAIsoscelesLine((len - i)/2, i);
         }
     }
+
+    public static void drawDiamond(int n) {
+        int line = n*2 - 1;
+        int len = (n-1)*2 + 1;
+        for (int i = 1; i <= len; i += 2) {
+            Draw.drawAIsoscelesLine((len - i)/2, i);
+        }
+        for (int i = len - 2; i >= 1; i -= 2) {
+            Draw.drawAIsoscelesLine((len - i)/2, i);
+        }
+    }
 }
 
