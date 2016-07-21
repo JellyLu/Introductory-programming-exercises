@@ -21,4 +21,13 @@ public class Draw {
         }
     }
 
+    public static void drawAVerticalLine(int n) {
+        if (n < 0) {
+            ConsoleTool.printInputInvalidError();
+        }
+        for (int i = 0; i < n; i++) {
+            ConsoleTool.logln("*");
+        }
+    }
 }
+

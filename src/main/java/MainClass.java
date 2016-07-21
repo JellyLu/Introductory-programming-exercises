@@ -17,11 +17,19 @@ public class MainClass {
         Draw.drawAHorizontialLine(n);
     }
 
+    public static void drawAVerticalLine() {
+        ConsoleTool.log("please input number: ");
+        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
+        Draw.drawAVerticalLine(n);
+    }
+
     public static void main(String args[]) {
         MainClass.printOneAsterisk();
 
         MainClass.drawAHorizontialLine();
 
+       MainClass.drawAVerticalLine();
     }
 }
+
 
