@@ -14,6 +14,8 @@ public class MainClass {
         MainClass.drawAHorizontialLine();
 
         MainClass.drawAVerticalLine();
+
+        MainClass.drawARightTriangle();
     }
 
     public static void printOneAsterisk() {
@@ -30,6 +32,12 @@ public class MainClass {
         ConsoleTool.log("please input number: ");
         int n = Integer.parseInt(ConsoleTool.inputFromConsole());
         Draw.drawAVerticalLine(n);
+    }
+
+    public static void drawARightTriangle() {
+        ConsoleTool.log("please input number: ");
+        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
+        Draw.drawARightTriangle(n);
     }
 }
 

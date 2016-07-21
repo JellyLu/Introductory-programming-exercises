@@ -33,5 +33,14 @@ public class Draw {
             ConsoleTool.logln("*");
         }
     }
+
+    public static void drawARightTriangle(int n) {
+        if (n < 0) {
+            ConsoleTool.printInputInvalidError();
+        }
+        for (int i = 1; i <= n; i++) {
+            Draw.drawAHorizontialLine(i);
+        }
+    }
 }
 
