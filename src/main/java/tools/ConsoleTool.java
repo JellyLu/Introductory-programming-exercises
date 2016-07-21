@@ -7,8 +7,12 @@ import java.util.Scanner;
  */
 public class ConsoleTool {
 
-    public static void printOnConsole(String outPutString) {
+    public static void logln(String outPutString) {
         System.out.println(outPutString);
+    }
+
+    public static void log(String outPutString) {
+        System.out.print(outPutString);
     }
 
     public static String inputFromConsole() {
