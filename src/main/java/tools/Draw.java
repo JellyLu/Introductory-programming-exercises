@@ -4,8 +4,12 @@ package tools;
  * Created by yjlu@thoughtworks.com on 7/21/16.
  */
 public class Draw {
-    public static void printOneAsterisk() {
+    public static void printlnOneAsterisk() {
         ConsoleTool.logln("*");
+    }
+
+    public static void printOneAsterisk() {
+        ConsoleTool.log("*");
     }
 
     public static void drawAHorizontialLine(int n) {

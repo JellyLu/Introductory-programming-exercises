@@ -17,7 +17,7 @@ public class MainClass {
     }
 
     public static void printOneAsterisk() {
-        Draw.printOneAsterisk();
+        Draw.printlnOneAsterisk();
     }
 
     public static void drawAHorizontialLine() {
