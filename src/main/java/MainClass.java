@@ -1,6 +1,9 @@
 import sun.applet.Main;
 import tools.ConsoleTool;
 import tools.Draw;
+import tools.Generator;
+
+import java.util.ArrayList;
 
 /**
  * Created by yjlu@thoughtworks.com on 7/21/16.
@@ -22,6 +25,8 @@ public class MainClass {
         MainClass.drawDiamond();
 
         MainClass.drawADiamondWithName();
+
+        MainClass.generatePrimeFactors();
     }
 
     public static void printOneAsterisk() {
@@ -62,6 +67,15 @@ public class MainClass {
         ConsoleTool.log("please input number: ");
         int n = Integer.parseInt(ConsoleTool.inputFromConsole());
         Draw.drawADiamondWithName(n);
+    }
+
+    public static void generatePrimeFactors() {
+        ConsoleTool.log("please input number: ");
+        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
+        ArrayList<Integer> list = new Generator().generatePrimeFactors(n);
+        for (int i = 0, len = list.size(); i < len; i++) {
+            ConsoleTool.log(String.format("%d ", list.get(i)));
+        }
     }
 }
 
