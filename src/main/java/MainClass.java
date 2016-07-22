@@ -20,6 +20,8 @@ public class MainClass {
         MainClass.drawIsoscelesTriangle();
 
         MainClass.drawDiamond();
+
+        MainClass.drawADiamondWithName();
     }
 
     public static void printOneAsterisk() {
@@ -54,6 +56,12 @@ public class MainClass {
         ConsoleTool.log("please input number: ");
         int n = Integer.parseInt(ConsoleTool.inputFromConsole());
         Draw.drawDiamond(n);
+    }
+
+    public static void drawADiamondWithName() {
+        ConsoleTool.log("please input number: ");
+        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
+        Draw.drawADiamondWithName(n);
     }
 }
 
