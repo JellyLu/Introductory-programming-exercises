@@ -22,6 +22,8 @@ public class MainClass {
         MainClass.drawDiamond();
 
         MainClass.drawADiamondWithName();
+
+        MainClass.fizzBuzz();
     }
 
     public static void printOneAsterisk() {
@@ -62,6 +64,10 @@ public class MainClass {
         ConsoleTool.log("please input number: ");
         int n = Integer.parseInt(ConsoleTool.inputFromConsole());
         Draw.drawADiamondWithName(n);
+    }
+
+    public static void fizzBuzz() {
+        Draw.fizzBuzz(100);
     }
 }
 
