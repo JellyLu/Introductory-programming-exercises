@@ -1,21 +1,34 @@
 package Factory;
 
+import tools.ConsoleTool;
+import tools.Draw;
+
 import java.util.ArrayList;
 
 /**
  * Created by yjlu@thoughtworks.com on 7/24/16.
  */
-public class DrawARightTriangle implements Drawer{
+public class DrawAIsoscelesLine implements Drawer{
+    private String isoscelesLine(int blankCount, int asteriskCount) {
+        String s = "";
+        for (int i = 0; i < blankCount; i++) {
+            s += " ";
+        }
+        for (int i = 0; i < asteriskCount; i++) {
+            s += "*";
+        }
+        for (int i = 0; i < blankCount; i++) {
+            s += " ";
+        }
+        return s;
+    }
+
     public String[] generateData(int n) {
         ArrayList<String> strings = new ArrayList<String>();
-        for (int i = 0; i < n; i++) {
-            String s = "";
-            for (int j = 0; j <= i; j++) {
-                s += "*";
-            }
-            strings.add(s);
+        int len = (n-1)*2 + 1;
+        for (int i = 1; i <= len; i += 2 ) {
+            strings.add(isoscelesLine((len - i)/2, i));
         }
-
         String[] newStrings = new String[strings.size()];
         newStrings = strings.toArray(newStrings);
         return newStrings;
