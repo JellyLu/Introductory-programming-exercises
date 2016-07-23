@@ -11,24 +11,30 @@ import static org.hamcrest.core.Is.is;
  */
 public class DrawOneAsteriskTest {
 
-    private DrawOneAsterisk drawOneAsterisk;
+    private DrawOneAsterisk drawer;
 
     @Before
     public void setUp() {
-       drawOneAsterisk = new DrawOneAsterisk();
+        drawer = new DrawOneAsterisk();
     }
 
     @Test
     public void should_return_one_asterisk_when_n_is_1() {
-        String[] s = drawOneAsterisk.generateData(1);
+        String[] s = drawer.generateData(1);
         assertThat(s.length, is(1));
         assertThat(s[0], is("*"));
     }
 
     @Test
     public void should_return_one_asterisk_when_n_is_100() {
-        String[] s = drawOneAsterisk.generateData(100);
+        String[] s = drawer.generateData(100);
         assertThat(s.length, is(1));
         assertThat(s[0], is("*"));
+    }
+
+    @Test
+    public void should_return_first_line() throws Exception {
+        String s = drawer.formatDataToString(new String[]{"first line", "second line"});
+        assertThat(s, is("first line"));
     }
 }
