@@ -1,5 +1,7 @@
 package Factory;
 
+import tools.Generator;
+
 import java.util.ArrayList;
 
 /**
@@ -30,9 +32,8 @@ public class DrawADiamondWithName implements Drawer {
         for (int i = len - 2; i >= 1; i -= 2) {
             strings.add(isoscelesLine((len - i)/2, i));
         }
-        String[] newStrings = new String[strings.size()];
-        newStrings = strings.toArray(newStrings);
-        return newStrings;
+
+        return Generator.convertArrayListToStringList(strings);
     }
 
     public String formatDataToString(String[] strings) throws Exception {

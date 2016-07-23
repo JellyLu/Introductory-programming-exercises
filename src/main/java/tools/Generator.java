@@ -31,4 +31,10 @@ public class Generator {
         return factors;
     }
 
+    public static String[] convertArrayListToStringList(ArrayList<String> arrayList) {
+        String[] newStrings = new String[arrayList.size()];
+        newStrings = arrayList.toArray(newStrings);
+        return newStrings;
+    }
+
 }

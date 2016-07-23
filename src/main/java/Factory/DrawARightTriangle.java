@@ -1,5 +1,7 @@
 package Factory;
 
+import tools.Generator;
+
 import java.util.ArrayList;
 
 /**
@@ -16,9 +18,7 @@ public class DrawARightTriangle implements Drawer{
             strings.add(s);
         }
 
-        String[] newStrings = new String[strings.size()];
-        newStrings = strings.toArray(newStrings);
-        return newStrings;
+        return Generator.convertArrayListToStringList(strings);
     }
 
     public String formatDataToString(String[] strings) throws Exception {

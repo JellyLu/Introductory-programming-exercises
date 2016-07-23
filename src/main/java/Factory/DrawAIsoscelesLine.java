@@ -2,6 +2,7 @@ package Factory;
 
 import tools.ConsoleTool;
 import tools.Draw;
+import tools.Generator;
 
 import java.util.ArrayList;
 
@@ -29,9 +30,7 @@ public class DrawAIsoscelesLine implements Drawer{
         for (int i = 1; i <= len; i += 2 ) {
             strings.add(isoscelesLine((len - i)/2, i));
         }
-        String[] newStrings = new String[strings.size()];
-        newStrings = strings.toArray(newStrings);
-        return newStrings;
+        return Generator.convertArrayListToStringList(strings);
     }
 
     public String formatDataToString(String[] strings) throws Exception {
