@@ -1,10 +1,5 @@
 package Factory;
 
-import tools.ConsoleTool;
-import tools.Draw;
-
-import java.util.ArrayList;
-
 /**
  * Created by yjlu@thoughtworks.com on 7/23/16.
  */

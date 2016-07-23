@@ -1,7 +1,5 @@
 package Factory;
 
-import java.util.ArrayList;
-
 /**
  * Created by yjlu@thoughtworks.com on 7/23/16.
  */
