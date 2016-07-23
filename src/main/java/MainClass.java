@@ -78,12 +78,11 @@ public class MainClass {
         ConsoleTool.log(drawer.formatDataToString(data));
     }
 
-    public static void generatePrimeFactors() {
+    public static void generatePrimeFactors() throws Exception {
         int n = ConsoleTool.inputANumber("Generate Prime Factors");
-        ArrayList<Integer> list = new Generator().generatePrimeFactors(n);
-        for (int i = 0, len = list.size(); i < len; i++) {
-            ConsoleTool.log(String.format("%d ", list.get(i)));
-        }
+        GeneratePrimeFactors drawer = new GeneratePrimeFactors();
+        String[] data = drawer.generateData(n);
+        ConsoleTool.log(drawer.formatDataToString(data));
 
     }
 

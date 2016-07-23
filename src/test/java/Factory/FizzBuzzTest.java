@@ -25,7 +25,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_three_line_each_with_different_asterisk_when_n_is_3() {
+    public void should_return_three_line_when_n_is_3() {
         String[] s = drawer.generateData(3);
         assertThat(s.length, is(3));
         assertThat(s[0], is("1"));
@@ -34,7 +34,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_three_line_each_with_different_asterisk_when_n_is_5() {
+    public void should_return_five_line_when_n_is_5() {
         String[] s = drawer.generateData(5);
         assertThat(s.length, is(5));
         assertThat(s[0], is("1"));
@@ -45,7 +45,7 @@ public class FizzBuzzTest {
     }
 
     @Test
-    public void should_return_three_line_each_with_different_asterisk_when_n_is_15() {
+    public void should_return_fifteen_line_when_n_is_15() {
         String[] s = drawer.generateData(15);
         assertThat(s.length, is(15));
         assertThat(s[0], is("1"));
