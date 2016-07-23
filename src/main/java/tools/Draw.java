@@ -85,5 +85,19 @@ public class Draw {
             Draw.drawAIsoscelesLine((len - i)/2, i);
         }
     }
+
+    public static void fizzBuzz(int n) {
+        for (int i = 1; i <= n; i++) {
+            if (i%3 == 0 && i%5 == 0) {
+                ConsoleTool.logln("FizzBuzz");
+            } else if (i%3 == 0) {
+                ConsoleTool.logln("Fizz");
+            } else if (i%5 == 0) {
+                ConsoleTool.logln("Buzz");
+            } else {
+                ConsoleTool.logln(String.format("%d", i));
+            }
+        }
+    }
 }
 
