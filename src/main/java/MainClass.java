@@ -78,6 +78,7 @@ public class MainClass {
         for (int i = 0, len = list.size(); i < len; i++) {
             ConsoleTool.log(String.format("%d ", list.get(i)));
         }
+    }
 
     public static void fizzBuzz() {
         Draw.fizzBuzz(100);
