@@ -16,6 +16,10 @@ public class DrawAHorizontalLine implements Drawer{
         if (strings.length == 0) {
             throw new Exception("strings is empty!");
         }
-        return strings[0];
+        String s = "";
+        for (int i = 0, len = strings.length; i < len; i++) {
+            s +=  strings[i] + "\n";
+        }
+        return s;
     }
 }

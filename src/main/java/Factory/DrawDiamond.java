@@ -1,6 +1,5 @@
 package Factory;
 
-import tools.Draw;
 import tools.Generator;
 
 import java.util.ArrayList;

@@ -28,4 +28,9 @@ public class ConsoleTool {
     public static void logBlank() {
         System.out.print(" ");
     }
+
+    public static int inputANumber() {
+        ConsoleTool.log("please input number: ");
+        return Integer.parseInt(ConsoleTool.inputFromConsole());
+    }
 }

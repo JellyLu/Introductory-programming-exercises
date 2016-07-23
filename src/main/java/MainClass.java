@@ -1,6 +1,5 @@
-import sun.applet.Main;
+import Factory.*;
 import tools.ConsoleTool;
-import tools.Draw;
 import tools.Generator;
 
 import java.util.ArrayList;
@@ -11,7 +10,7 @@ import java.util.ArrayList;
 
 public class MainClass {
 
-    public static void main(String args[]) {
+    public static void main(String args[]) throws Exception {
         MainClass.printOneAsterisk();
 
         MainClass.drawAHorizontialLine();
@@ -31,44 +30,52 @@ public class MainClass {
         MainClass.fizzBuzz();
     }
 
-    public static void printOneAsterisk() {
-        Draw.printlnOneAsterisk();
+    public static void printOneAsterisk() throws Exception {
+        DrawAHorizontalLine drawer = new DrawAHorizontalLine();
+        String[] data = drawer.generateData(1);
+        ConsoleTool.log(drawer.formatDataToString(data));
     }
 
-    public static void drawAHorizontialLine() {
-        ConsoleTool.log("please input a number: ");
-        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
-        Draw.drawAHorizontialLine(n);
+    public static void drawAHorizontialLine() throws Exception {
+        int n = ConsoleTool.inputANumber();
+        DrawAHorizontalLine drawer = new DrawAHorizontalLine();
+        String[] data = drawer.generateData(n);
+        ConsoleTool.log(drawer.formatDataToString(data));
     }
 
-    public static void drawAVerticalLine() {
-        ConsoleTool.log("please input number: ");
-        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
-        Draw.drawAVerticalLine(n);
+    public static void drawAVerticalLine() throws Exception {
+        int n = ConsoleTool.inputANumber();
+        DrawAVerticalLine drawer = new DrawAVerticalLine();
+        String[] data = drawer.generateData(n);
+        ConsoleTool.log(drawer.formatDataToString(data));
     }
 
-    public static void drawARightTriangle() {
-        ConsoleTool.log("please input number: ");
-        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
-        Draw.drawARightTriangle(n);
+    public static void drawARightTriangle() throws Exception {
+        int n = ConsoleTool.inputANumber();
+        DrawARightTriangle drawer = new DrawARightTriangle();
+        String[] data = drawer.generateData(n);
+        ConsoleTool.log(drawer.formatDataToString(data));
     }
 
-    public static void drawIsoscelesTriangle() {
-        ConsoleTool.log("please input number: ");
-        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
-        Draw.drawIsoscelesTriangle(n);
+    public static void drawIsoscelesTriangle() throws Exception {
+        int n = ConsoleTool.inputANumber();
+        DrawAIsoscelesLine drawer = new DrawAIsoscelesLine();
+        String[] data = drawer.generateData(n);
+        ConsoleTool.log(drawer.formatDataToString(data));
     }
 
-    public static void drawDiamond() {
-        ConsoleTool.log("please input number: ");
-        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
-        Draw.drawDiamond(n);
+    public static void drawDiamond() throws Exception {
+        int n = ConsoleTool.inputANumber();
+        DrawDiamond drawer = new DrawDiamond();
+        String[] data = drawer.generateData(n);
+        ConsoleTool.log(drawer.formatDataToString(data));
     }
 
-    public static void drawADiamondWithName() {
-        ConsoleTool.log("please input number: ");
-        int n = Integer.parseInt(ConsoleTool.inputFromConsole());
-        Draw.drawADiamondWithName(n);
+    public static void drawADiamondWithName() throws Exception {
+        int n = ConsoleTool.inputANumber();
+        DrawADiamondWithName drawer = new DrawADiamondWithName();
+        String[] data = drawer.generateData(n);
+        ConsoleTool.log(drawer.formatDataToString(data));
     }
 
     public static void generatePrimeFactors() {
@@ -80,8 +87,11 @@ public class MainClass {
         }
     }
 
-    public static void fizzBuzz() {
-        Draw.fizzBuzz(100);
+    public static void fizzBuzz() throws Exception {
+        int n = ConsoleTool.inputANumber();
+        FizzBuzz drawer = new FizzBuzz();
+        String[] data = drawer.generateData(n);
+        ConsoleTool.log(drawer.formatDataToString(data));
     }
 }
 
