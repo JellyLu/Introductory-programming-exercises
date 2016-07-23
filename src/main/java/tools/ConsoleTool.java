@@ -29,8 +29,8 @@ public class ConsoleTool {
         System.out.print(" ");
     }
 
-    public static int inputANumber() {
-        ConsoleTool.log("please input number: ");
+    public static int inputANumber(String methodName) {
+        ConsoleTool.log( methodName + " - please input number: ");
         return Integer.parseInt(ConsoleTool.inputFromConsole());
     }
 }
