@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 import tools.Generator;
 
@@ -7,18 +7,18 @@ import java.util.ArrayList;
 /**
  * Created by yjlu@thoughtworks.com on 7/24/16.
  */
-public class DrawARightTriangle implements Drawer{
+public class GeneratePrimeFactors implements Drawer {
     public String[] generateData(int n) {
-        ArrayList<String> strings = new ArrayList<String>();
-        for (int i = 0; i < n; i++) {
-            String s = "";
-            for (int j = 0; j <= i; j++) {
-                s += "*";
+        ArrayList<Integer> list = new Generator().generatePrimeFactors(n);
+        String s = "";
+        for (int i = 0, len = list.size(); i < len; i++) {
+            s += list.get(i);
+            if (i != len - 1) {
+                s += " ";
             }
-            strings.add(s);
         }
-
-        return Generator.convertArrayListToStringList(strings);
+        if (s == "") return new String[]{};
+        return new String[]{s};
     }
 
     public String formatDataToString(String[] strings) throws Exception {

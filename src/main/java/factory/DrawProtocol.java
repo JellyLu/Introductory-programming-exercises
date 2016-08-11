@@ -1,6 +1,4 @@
-package Factory;
-
-import java.util.ArrayList;
+package factory;
 
 /**
  * Created by yjlu@thoughtworks.com on 7/23/16.

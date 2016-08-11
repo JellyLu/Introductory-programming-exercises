@@ -1,8 +1,5 @@
-import Factory.*;
+import factory.*;
 import tools.ConsoleTool;
-import tools.Generator;
-
-import java.util.ArrayList;
 
 /**
  * Created by yjlu@thoughtworks.com on 7/21/16.

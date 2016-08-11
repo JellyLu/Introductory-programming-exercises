@@ -1,19 +1,26 @@
-package Factory;
+package factory;
 
 import tools.Generator;
 
 import java.util.ArrayList;
 
 /**
- * Created by yjlu@thoughtworks.com on 7/23/16.
+ * Created by yjlu@thoughtworks.com on 7/24/16.
  */
-public class DrawAVerticalLine implements Drawer {
+public class FizzBuzz implements Drawer {
     public String[] generateData(int n) {
         ArrayList<String> strings = new ArrayList<String>();
-        for (int i = 0; i < n; i++) {
-            strings.add("*");
+        for (int i = 1; i <= n; i++) {
+            if (i%3 == 0 && i%5 == 0) {
+                strings.add("FizzBuzz");
+            } else if (i%3 == 0) {
+                strings.add("Fizz");
+            } else if (i%5 == 0) {
+                strings.add("Buzz");
+            } else {
+                strings.add(String.format("%d", i));
+            }
         }
-
         return Generator.convertArrayListToStringList(strings);
     }
 

@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 import tools.Generator;
 
@@ -7,7 +7,7 @@ import java.util.ArrayList;
 /**
  * Created by yjlu@thoughtworks.com on 7/24/16.
  */
-public class DrawAIsoscelesLine implements Drawer{
+public class DrawADiamondWithName implements Drawer {
     private String isoscelesLine(int blankCount, int asteriskCount) {
         String s = "";
         for (int i = 0; i < blankCount; i++) {
@@ -25,9 +25,14 @@ public class DrawAIsoscelesLine implements Drawer{
     public String[] generateData(int n) {
         ArrayList<String> strings = new ArrayList<String>();
         int len = (n-1)*2 + 1;
-        for (int i = 1; i <= len; i += 2 ) {
+        for (int i = 1; i < len; i += 2) {
             strings.add(isoscelesLine((len - i)/2, i));
         }
+        strings.add("Bill");
+        for (int i = len - 2; i >= 1; i -= 2) {
+            strings.add(isoscelesLine((len - i)/2, i));
+        }
+
         return Generator.convertArrayListToStringList(strings);
     }
 

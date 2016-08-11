@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 import org.junit.Before;
 import org.junit.Test;

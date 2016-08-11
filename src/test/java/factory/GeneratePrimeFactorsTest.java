@@ -1,11 +1,7 @@
-package Factory;
+package factory;
 
 import org.junit.Before;
 import org.junit.Test;
-import tools.ConsoleTool;
-import tools.Generator;
-
-import java.util.ArrayList;
 
 import static org.hamcrest.MatcherAssert.assertThat;
 import static org.hamcrest.core.Is.is;

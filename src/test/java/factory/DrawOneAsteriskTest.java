@@ -1,4 +1,4 @@
-package Factory;
+package factory;
 
 import org.junit.Before;
 import org.junit.Test;
@@ -9,12 +9,13 @@ import static org.hamcrest.core.Is.is;
 /**
  * Created by yjlu@thoughtworks.com on 7/23/16.
  */
-public class DrawAHorizontalLineTest {
-    private DrawAHorizontalLine drawer;
+public class DrawOneAsteriskTest {
+
+    private DrawOneAsterisk drawer;
 
     @Before
     public void setUp() {
-        drawer = new DrawAHorizontalLine();
+        drawer = new DrawOneAsterisk();
     }
 
     @Test
@@ -25,10 +26,10 @@ public class DrawAHorizontalLineTest {
     }
 
     @Test
-    public void should_return_eight_asterisk_in_one_line_when_n_is_8() {
-        String[] s = drawer.generateData(8);
+    public void should_return_one_asterisk_when_n_is_100() {
+        String[] s = drawer.generateData(100);
         assertThat(s.length, is(1));
-        assertThat(s[0], is("********"));
+        assertThat(s[0], is("*"));
     }
 
     @Test
